@@ -22,43 +22,27 @@ The host systems for both the SV08 and SV08-MAX share architectural similarities
 
 > **WARNING:** This work is provided as-is, with community-verified configurations for the original controller boards. Modifications to device tree source files, clock frequencies, or voltage regulators carry inherent risks of hardware instability or component failure. Use at your own risk.
 
-/****************************************************************************
- * Sovol SV08 printer host family uses an Allwinner H616.                   *
- * A deacarade clone of BTT-CB1-EMMC.                                       *
- *                                                                          *
- * Electrically an eMMC-variant CB1, so it reuses the CB1 device tree and   *
- * u-boot. Board-level differences vs the CB1:                              *
- *   - onboard eMMC part validated by the vendor at 45 MHz (the CB1 device  *
- *     tree leaves mmc2 at the SoC default);                                *
- *   - a toolboard UART is broken out; enable it with the stock             *
- * MAIN NOTICE :                                                            *
- *   -SV08                                                                  *
- *        sun50i-h616-uart3-pi overlay (DEFAULT_OVERLAYS                    *
- *        in the board config).                                             *
- *                                                                          *
- *                                                                          *
- *   - SV08-MAX                                                             *
- *        sun50i-h616-uart4-pi overlay (DEFAULT_OVERLAYS                    *
- *        in the board config).                                             *
- *   - The main trick that Sovol and BTT uses to mantain compatiblity:      *
- *   	  the overlays related to UART4 remap the PIN-CTRL and FLOW-CTL     *
- *        over the UART3 masking all behaivor                               *
- *   - SOVOL reduce the onboard eMMC max speed due a bad electrical desssign*
- * Community DTS board: verified by DrDitto.                                *
- *                                                                          *
- * WARNING:                                                                 *
- * Use at your own risk!!!!!!                                               *
- *                                                                          *
- * As part of the applied research all requiered #define                    *
- * was clearly grouped by functionality grouped using:                      *
- * Be caerefull with your changes, A great Power, bla bla bla bla           *
- *                                                                          *
- * This work was made as personal proyect but deployed as GPL V2 requieres  *
- * Any change over the define section will be only your responsability      *
- * This dtsi file was tested over a SV08 is totaly functional and validated *
- *                                                                          *
- *                                                                          *
- * #ifndef                                                                  *
- * #endif                                                                   *
- *                                                                          *
- ****************************************************************************/
+  Sovol SV08 printer host family uses an Allwinner H616.                   
+  A deacarade clone of BTT-CB1-EMMC.                                       
+                                                                           
+  Electrically an eMMC-variant CB1, so it reuses the CB1 device tree and   
+  u-boot. Board-level differences vs the CB1:                              
+    - onboard eMMC part validated by the vendor at 45 MHz (the CB1 device  
+      tree leaves mmc2 at the SoC default);                                
+    - a toolboard UART is broken out; enable it with the stock             
+  MAIN NOTICE :                                                            
+    -SV08                                                                  
+         sun50i-h616-uart3-pi overlay (DEFAULT_OVERLAYS                    
+         in the board config).                                             
+                                                                           
+                                                                           
+    - SV08-MAX                                                             
+         sun50i-h616-uart4-pi overlay (DEFAULT_OVERLAYS                    
+         in the board config).                                             
+    - The main trick that Sovol and BTT uses to mantain compatiblity:      
+    	  the overlays related to UART4 remap the PIN-CTRL and FLOW-CTL     
+         over the UART3 masking all behaivor                               
+    - SOVOL reduce the onboard eMMC max speed due a bad electrical desssign
+  Community DTS board: verified by DrDitto.                                
+                                                                           
+ 
