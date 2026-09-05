@@ -23,7 +23,7 @@ The host systems for both the SV08 and SV08-MAX share architectural similarities
 > **WARNING:** This work is provided as-is, with community-verified configurations for the original controller boards. Modifications to device tree source files, clock frequencies, or voltage regulators carry inherent risks of hardware instability or component failure. Use at your own risk.
 
   Sovol SV08 printer host family uses an Allwinner H616.                   
-  A deacarade clone of BTT-CB1-EMMC.                                       
+  A clone like of BTT-CB1-EMMC.                                       
                                                                            
   Electrically an eMMC-variant CB1, so it reuses the CB1 device tree and   
   u-boot. Board-level differences vs the CB1:                              
@@ -34,8 +34,6 @@ The host systems for both the SV08 and SV08-MAX share architectural similarities
     -SV08                                                                  
          sun50i-h616-uart3-pi overlay (DEFAULT_OVERLAYS                    
          in the board config).                                             
-                                                                           
-                                                                           
     - SV08-MAX                                                             
          sun50i-h616-uart4-pi overlay (DEFAULT_OVERLAYS                    
          in the board config).                                             
@@ -43,6 +41,7 @@ The host systems for both the SV08 and SV08-MAX share architectural similarities
     	  the overlays related to UART4 remap the PIN-CTRL and FLOW-CTL     
          over the UART3 masking all behaivor                               
     - SOVOL reduce the onboard eMMC max speed due a bad electrical desssign
-  Community DTS board: verified by DrDitto.                                
+  
+  Community DTS: verified by DrDitto.                                
                                                                            
  
