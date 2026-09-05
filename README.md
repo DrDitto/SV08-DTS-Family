@@ -1,4 +1,4 @@
-# Sovol SV08 and SV08-MAX Device Tree Support and Overlays
+# Sovol SV08 and SV08-MAX Device Tree Support
 
 This repository contains custom Device Tree Source Include (`.dtsi`) files and header configurations designed specifically for the original controller boards of the **Sovol SV08** and **Sovol SV08-MAX** 3D printers, powered by the **Allwinner H616** SoC (an eMMC-variant compatible with the BigTreeTech CB1 platform).
 
