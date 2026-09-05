@@ -42,6 +42,6 @@ The host systems for both the SV08 and SV08-MAX share architectural similarities
          over the UART3 masking all behaivor                               
     - SOVOL reduce the onboard eMMC max speed due a bad electrical desssign
   
-  Community DTS: verified by DrDitto.                                
+  Community DTS: verified by DrDitto over armbian with kernel 7.1.2 and 7.2.2.                                
                                                                            
  
